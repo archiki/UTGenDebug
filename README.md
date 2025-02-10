@@ -4,7 +4,7 @@
 <img src="./assets/fig1.png" alt="Figure of the motivation for UTGen" width="500"/>
 
 ## Overview
-This repository contains the code for our paper [Learning to Generate Unit Tests for Automated Debugging](https://arxiv.org/abs/2502.01619). We present UTGen, a data curation and training method for teching models to generate unit tests (inputs and outputs for a given function), and UTDebug, a debugging pipeline that uses generated unit tests for automated code-debugging with LLMs. In this repo, we provide the code for UTDebug to evaluate unit tests extrinsically and a script to evaluate attack rate, output accuracy, and acc $\cap$ attack on three debugging datasets: HE+Fix, MBPP+Fix, and MBPP+Fix (Hard).
+This repository contains the code for our paper [Learning to Generate Unit Tests for Automated Debugging](https://arxiv.org/abs/2502.01619). We present UTGen, a data curation and training method for teaching models to generate unit tests (inputs and outputs for a given function), and UTDebug, a debugging pipeline that uses generated unit tests for automated code-debugging with LLMs. In this repo, we provide the code for UTDebug to evaluate unit tests extrinsically and a script to evaluate attack rate, output accuracy, and acc $\cap$ attack on three debugging datasets: HE+Fix, MBPP+Fix, and MBPP+Fix (Hard).
 
 ![UTDebug motivation and overview](assets/fig3.png)
 
