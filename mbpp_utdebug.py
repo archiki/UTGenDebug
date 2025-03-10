@@ -365,13 +365,12 @@ if __name__ == "__main__":
                     tensor_parallel_size=torch.cuda.device_count(),
                     tokenizer=model_name)
     tokenizer = AutoTokenizer.from_pretrained(model_name)
-    code_src = load_dataset('json', data_files=[args.source])['train']
 
 
     print(colored(f"Found {len(code_src)} instances...", 'yellow'))
     test_lookup, gen_test_lookup, problem_lookup = {}, {}, {}
     
-    problems = load_dataset(HF_DATASET[args.dataset], cache_dir=".cache/datasets")['train'] 
+    problems = load_dataset('json', data_files=HF_DATASET[args.dataset], cache_dir=".cache/datasets")['train'] 
     
     problems = problems.map(extract_test, keep_in_memory=True)
     problems = problems.map(build_problem_lookup, keep_in_memory=True)

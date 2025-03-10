@@ -173,7 +173,7 @@ if __name__ == "__main__":
 
     test_lookup, gen_test_lookup, problem_lookup = {}, {}, {}
     
-    problems = load_dataset(HF_DATASET[args.dataset], cache_dir=".cache/datasets")['train'] 
+    problems = load_dataset('json', data_files=HF_DATASET[args.dataset], cache_dir=".cache/datasets")['train'] 
 
     problems = problems.map(extract_test, keep_in_memory=True)
 

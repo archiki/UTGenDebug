@@ -67,7 +67,7 @@ if __name__ == "__main__":
     os.environ["TOKENIZERS_PARALLELISM"] = "false"
      #
     test_lookup = {}
-    if not args.hard:
+    if args.hard:
         problems = load_dataset('json', data_files=HF_DATASET["mbpp_plus_fix_hard"])['train']
     else:
         problems = load_dataset('json', data_files=HF_DATASET["mbpp_plus_fix"])['train']
